@@ -1,6 +1,6 @@
 const express = require('express')      //alternative to using import...
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000 || 80 || 443
 const router = require('./router')
 
 app.use(express.json());
