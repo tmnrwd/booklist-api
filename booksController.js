@@ -19,7 +19,7 @@ exports.create = function (req, res, next) {   //create operation
         return(next(createError(400, "Please provide a book title.")))
         //if there's no body, run createError and present a 400 error with this string
     }
-    booklist.push({id: idno, title: req.body.title, author: req.body.author, read: false})             //assigns an ID, and turns body into the name
+    booklist.push({id: idno, title: req.body.title, author: req.body.author, read: req.body.read})             //assigns an ID, and turns body into the name
     res.send({result: true})            //client knows something has happened
     idno++
 }
