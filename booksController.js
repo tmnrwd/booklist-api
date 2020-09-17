@@ -52,8 +52,10 @@ exports.update = function (req, res, next) {
             book.title = req.body.title}                                 //change body to the body in request
             if (req.body.author){
             book.author = req.body.author}
-            if (req.body.read){
-            book.read = req.body.read}
+            if (req.body.read == true){
+            book.read = true}
+            if (req.body.read == false){
+            book.read = false}
         }
     return book                                                         //return resulting list
     })
